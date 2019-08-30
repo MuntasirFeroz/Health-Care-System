@@ -1,0 +1,9 @@
+Total 1022 data or instances
+4columns 
+3 Features : Moisture , Temperature, Pulse
+Target Column : Condition
+Here, there are 3 Target classess for Condition 
+Modarate =-1->300
+Normal=0 ->340
+Critical=1 ->381
+

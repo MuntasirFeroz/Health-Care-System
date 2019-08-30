@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pridicted Result</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+<!--<link rel="stylesheet" type="text/css" href="loginStyleSheet.css">-->
+
+<style type="text/css">
+    
+    .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    top: -15%;
+    right: 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.critical_box{
+    background-color: #d3213f;
+    font-style: Sans-serif,Serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10%;    
+}
+.moderate_box{
+    background-color: #dbef21;
+    font-style: Sans-serif,Serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10%;   
+}
+.normal_box{
+    background-color: #87f42e;
+    font-style: Sans-serif,Serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10%;   
+}
+</style>
+</head>
+<body>
+</div>
+
+    <div class="login-box">
+        <h1 style="font-size: 40px;">Health Care</h1>
+        {% if prediction == 'Critical'%}
+            <div class="critical_box">
+                <h2>Critical</h2>    
+            </div>
+            
+        {% elif prediction == 'Moderate'%}
+            <div class="moderate_box">
+                <h2>Moderate </h2>    
+            </div>
+
+        {% elif prediction == 'Normal' %}
+            <div class="normal_box">
+                <h2>Normal</h2>    
+            </div>
+
+        {% endif %}
+    </div>
+
+</body>
+</html>
